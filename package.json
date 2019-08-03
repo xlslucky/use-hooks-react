@@ -1,0 +1,19 @@
+{
+  "name": "use-hooks-react",
+  "version": "1.0.0",
+  "description": "use-hooks",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlslucky/use-hooks-react.git"
+  },
+  "author": "xlslucky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xlslucky/use-hooks-react/issues"
+  },
+  "homepage": "https://github.com/xlslucky/use-hooks-react#readme"
+}
