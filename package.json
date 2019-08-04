@@ -1,7 +1,7 @@
 {
   "name": "use-hooks-react",
-  "version": "1.0.3",
-  "description": "use-hooks",
+  "version": "1.0.4",
+  "description": "use hooks",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/xlslucky/use-hooks-react.git"
   },
+  "keywords": [
+    "react",
+    "hooks",
+    "use"
+  ],
   "author": "xlslucky",
   "license": "ISC",
   "bugs": {
