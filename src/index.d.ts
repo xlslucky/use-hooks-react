@@ -2,8 +2,8 @@ export = useHooks;
 export as namespace useHooks;
 
 declare namespace useHooks {
-  function useModal(): void;
-  function usePage(): void;
-  function useResize(): void;
-  function useSearch(initParams: object, initRefresh: boolean): void;
+  function useModal(): [];
+  function usePage(): [];
+  function useResize(): [];
+  function useSearch(initParams: object, initRefresh: boolean): [];
 }
