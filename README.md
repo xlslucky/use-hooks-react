@@ -12,7 +12,7 @@ $ npm install use-hooks-react
 
 ```js
 import {
-  useModal,
+	useModal,
 	usePage,
 	useResize,
 	useSearch,
