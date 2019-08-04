@@ -5,5 +5,5 @@ declare namespace useHooks {
   function useModal(): void;
   function usePage(): void;
   function useResize(): void;
-  function useSearch(): void;
+  function useSearch(initParams: object, initRefresh: boolean): void;
 }
