@@ -11,12 +11,7 @@ $ npm install use-hooks-react
 ## Usage
 
 ```js
-import {
-	useModal,
-	usePage,
-	useResize,
-	useSearch,
-} from 'use-hooks-react'
+import { useModal, usePage, useResize, useSearch } from 'use-hooks-react'
 
 ...
 const [visible, current, openModal, closeModal] = useModal()
