@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const INIT_ATTRIBUTE = {
+const getInitAttribute = () => ({
   bodyClientWidth: document.body.clientWidth, // 网页可见区域宽
   bodyClientHeight: document.body.clientHeight, // 网页可见区域高
   bodyOffsetWidth: document.body.offsetWidth, // 网页可见区域宽(包括边线的宽)
@@ -15,12 +15,12 @@ const INIT_ATTRIBUTE = {
   screenWidth: window.screen.width, // 屏幕分辨率的宽
   screenAvailHeight: window.screen.availHeight, // 屏幕可用工作区高度
   screenAvailWidth: window.screen.availWidth, // 屏幕可用工作区宽度
-}
+})
 
 const useResize = () => {
-  if (!document) return []
+  if (typeof window !== 'object' || typeof document !== 'object') return []
 
-  const [attribute, setAttribute] = useState(INIT_ATTRIBUTE)
+  const [attribute, setAttribute] = useState(getInitAttribute())
 
   useEffect(() => {
     window.onresize = () => {
