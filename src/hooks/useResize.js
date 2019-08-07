@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+// lib
+const React = require('react')
 
 const getInitAttribute = () => ({
   bodyClientWidth: document.body.clientWidth, // 网页可见区域宽
@@ -20,9 +21,9 @@ const getInitAttribute = () => ({
 const useResize = () => {
   if (typeof window !== 'object' || typeof document !== 'object') return []
 
-  const [attribute, setAttribute] = useState(getInitAttribute())
+  const [attribute, setAttribute] = React.useState(getInitAttribute())
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.onresize = () => {
       setAttribute({
         bodyClientWidth: document.body.clientWidth,
@@ -50,4 +51,4 @@ const useResize = () => {
   return [attribute]
 }
 
-export default useResize
+module.exports = useResize

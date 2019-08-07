@@ -1,20 +1,20 @@
 // lib
-import { useState } from 'react'
+const React = require('react')
 
-export const PAGE_INFO_DEFAULT = {
+const PAGE_INFO_DEFAULT = {
   pageNo: 1,
   pageSize: 10,
   total: 0,
 }
 
 const usePage = () => {
-  const [list, setList] = useState([])
+  const [list, setList] = React.useState([])
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = React.useState(false)
 
-  const [pageInfo, setPageInfo] = useState(PAGE_INFO_DEFAULT)
+  const [pageInfo, setPageInfo] = React.useState(PAGE_INFO_DEFAULT)
 
   return [list, pageInfo, loading, setList, setPageInfo, setLoading]
 }
 
-export default usePage
+module.exports = usePage

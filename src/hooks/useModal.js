@@ -1,10 +1,10 @@
 // lib
-import { useState } from 'react'
+const React = require('react')
 
 const useModal = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = React.useState(false)
 
-  const [current, setCurrent] = useState()
+  const [current, setCurrent] = React.useState()
 
   const openModal = item => {
     setCurrent(item)
@@ -19,4 +19,4 @@ const useModal = () => {
   return [visible, current, openModal, closeModal]
 }
 
-export default useModal
+module.exports = useModal

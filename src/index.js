@@ -1,7 +1,7 @@
-export { default as useModal } from './hooks/useModal'
-export { default as usePage } from './hooks/usePage'
-export { default as useResize } from './hooks/useResize'
-export { default as useSearch } from './hooks/useSearch'
+const useModal = require('./hooks/useModal')
+const usePage = require('./hooks/usePage')
+const useResize = require('./hooks/useResize')
+const useSearch = require('./hooks/useSearch')
 
 const useHooks = {
   useModal,
@@ -10,4 +10,4 @@ const useHooks = {
   useSearch,
 }
 
-export default useHooks
+module.exports = useHooks

@@ -1,12 +1,12 @@
 // lib
-import { useState } from 'react'
+const React = require('react')
 
 const useSearch = (initParams = {}, initRefresh = false) => {
-  const [refresh, setRefresh] = useState(initRefresh)
+  const [refresh, setRefresh] = React.useState(initRefresh)
 
-  const [params, setParams] = useState(initParams)
+  const [params, setParams] = React.useState(initParams)
 
   return [refresh, params, setRefresh, setParams]
 }
 
-export default useSearch
+module.exports = useSearch
