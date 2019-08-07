@@ -18,6 +18,8 @@ const INIT_ATTRIBUTE = {
 }
 
 const useResize = () => {
+  if (!document) return []
+
   const [attribute, setAttribute] = useState(INIT_ATTRIBUTE)
 
   useEffect(() => {
