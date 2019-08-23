@@ -1,6 +1,6 @@
 {
   "name": "use-hooks-react",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "use hooks",
   "main": "src/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/xlslucky/use-hooks-react/issues"
   },
   "homepage": "https://github.com/xlslucky/use-hooks-react#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.8.6"
   }
 }
