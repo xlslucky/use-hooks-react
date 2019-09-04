@@ -1,10 +1,10 @@
 // lib
 const React = require('react')
 
-const useModal = () => {
-  const [visible, setVisible] = React.useState(false)
+const useModal = (initItem, initVisible = false) => {
+  const [visible, setVisible] = React.useState(initVisible)
 
-  const [current, setCurrent] = React.useState()
+  const [current, setCurrent] = React.useState(initItem)
 
   const openModal = item => {
     setCurrent(item)
