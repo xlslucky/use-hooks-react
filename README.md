@@ -32,7 +32,7 @@ import { useModal } from 'use-hooks-react'
 const InfoModal = props => {
   const { visble, onCancel, onOk, user = {} } = props
   return (
-  	<Modal
+    <Modal
       visible={visble}
       title="info"
       onCancel={onCancel}
@@ -56,10 +56,14 @@ const UseModalDemo = () => {
  
   return (
   	<>
-    	<Button onClick={handleBtn}>
-      	Show UserInfo
-   		</Button>
-    	<InfoModal user={current} onCancel={closeModal} onOk={() => {}} />
+      <Button onClick={handleBtn}>
+        Show UserInfo
+      </Button>
+      <InfoModal
+        user={current}
+        onCancel={closeModal}
+        onOk={() => {}}
+      />
     </>
   )
 }
@@ -82,7 +86,7 @@ const UsePageDemo = () => {
     const getList = async () => {
       setLoading(true)
       const url = `https://api.github.com/users?xxx=${params.name}`
-			const data = await window.fetch(url).then(resp => resp.json())
+      const data = await window.fetch(url).then(resp => resp.json())
       setList(data)
       setLoading(false)
       setRefresh(false)
@@ -106,18 +110,18 @@ const UsePageDemo = () => {
 
   return (
     <>
-    	<form onSubmit={onSubmit}>
-    		<Input value={params.name} onChange={onChangeInput('name')} />
-      	<Button htmlType="submit">Submit</Button>
-    	</form>
-    	<div>
-    		{
+      <form onSubmit={onSubmit}>
+        <Input value={params.name} onChange={onChangeInput('name')} />
+        <Button htmlType="submit">Submit</Button>
+      </form>
+      <div>
+        {
           loading ?
             'loading...'
             :
             list.map(item => <div>{item.login}</div>)
-      	}
-    	</div>
+        }
+      </div>
     </>
   )
 }
@@ -135,9 +139,9 @@ const UseResizeDemo = () => {
   
   return (
   	<>
-    	<p>bodyClientWidth: {attribute.bodyClientWidth}</p>
+      <p>bodyClientWidth: {attribute.bodyClientWidth}</p>
       <p>bodyClientHeight: {attribute.bodyClientHeight}</p>
-    	...
+      ...
     </>
   )
 }
