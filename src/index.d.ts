@@ -2,29 +2,29 @@ export = useHooks;
 export as namespace useHooks;
 
 interface Attribute {
-  bodyClientWidth: number
   bodyClientHeight: number
-  bodyOffsetWidth: number
+  bodyClientWidth: number
   bodyOffsetHeight: number
-  bodyScrollWidth: number
+  bodyOffsetWidth: number
   bodyScrollHeight: number
-  bodyScrollTop: number
+  bodyScrollWidth: number
   bodyScrollLeft: number
-  windowScreenTop: number
-  windowScreenLeft: number
-  screenHeight: number
-  screenWidth: number
+  bodyScrollTop: number
   screenAvailHeight: number
   screenAvailWidth: number
+  screenHeight: number
+  screenWidth: number
+  windowScreenLeft: number
+  windowScreenTop: number
 }
 
 declare namespace useHooks {
   // visible, current, openModal, closeModal
-  function useModal(initItem?: any, initVisible?: boolean): [boolean, any, Function, Function];
+  function useModal(initItem: any, initVisible: boolean): [boolean, any, any, any];
   // list, pageInfo, loading, setList, setPageInfo, setLoading
-  function usePage(): [Array<any>, any, boolean, Function, Function, Function];
+  function usePage(): [Array<any>, object, boolean, any, any, any];
   // attribute
   function useResize(): [Attribute];
   // refresh, params, setRefresh, setParams
-  function useSearch(initParams?: object, initRefresh?: boolean): [boolean, any, Function, Function];
+  function useSearch(initParams: object, initRefresh: boolean): [boolean, object, any, any];
 }
