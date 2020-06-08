@@ -18,13 +18,25 @@ interface Attribute {
   windowScreenTop: number
 }
 
+interface PageInfo {
+  [name: string]: string
+}
+
+interface ListItem {
+  [name: string]: string
+}
+
+interface Params {
+  [name: string]: string
+}
+
 declare namespace useHooks {
   // visible, current, openModal, closeModal
-  function useModal(initItem?: any, initVisible?: boolean): [boolean, any, any, any];
+  function useModal<T>(initItem?: T, initVisible?: boolean): [boolean, T, (item: T) => void, () => void];
   // list, pageInfo, loading, setList, setPageInfo, setLoading
-  function usePage(): [Array<any>, object, boolean, any, any, any];
+  function usePage(): [Array<ListItem>, PageInfo, boolean, (list: Array<ListItem>) => void, (pageInfo: PageInfo) => void, (loading: boolean) => void];
   // attribute
   function useResize(): [Attribute];
   // refresh, params, setRefresh, setParams
-  function useSearch(initParams: object, initRefresh: boolean): [boolean, object, any, any];
+  function useSearch(initParams?: object, initRefresh?: boolean): [boolean, object, (refresh: boolean) => void, (params: Params) => void];
 }
