@@ -20,7 +20,7 @@ interface Attribute {
 
 declare namespace useHooks {
   // visible, current, openModal, closeModal
-  function useModal(initItem: any, initVisible: boolean): [boolean, any, any, any];
+  function useModal(initItem?: any, initVisible?: boolean): [boolean, any, any, any];
   // list, pageInfo, loading, setList, setPageInfo, setLoading
   function usePage(): [Array<any>, object, boolean, any, any, any];
   // attribute
