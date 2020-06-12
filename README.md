@@ -11,13 +11,14 @@ $ npm install use-hooks-react
 ## Usage
 
 ```js
-import { useModal, usePage, useResize, useSearch } from 'use-hooks-react'
+import { useModal, usePage, useResize, useSearch, useBasicResize } from 'use-hooks-react'
 
 ...
 const [visible, current, openModal, closeModal] = useModal()
 const [list, pageInfo, loading, setList, setPageInfo, setLoading] = usePage()
 const [attribute] = useResize()
 const [refresh, params, setRefresh, setParams] = useSearch()
+const attribute = useBasicResize()
 ...
 ```
 
@@ -129,19 +130,22 @@ const UsePageDemo = () => {
 export default UsePageDemo
 ```
 
-#### useResize
+#### useResize | useBasicResize
 
 ```jsx
 import { useResize } from 'use-hooks-react'
 
 const UseResizeDemo = () => {
   const [attribute] = useResize()
+  const basicAttribute = useBasicResize()
   
   return (
   	<>
       <p>bodyClientWidth: {attribute.bodyClientWidth}</p>
       <p>bodyClientHeight: {attribute.bodyClientHeight}</p>
       ...
+      <p>bodyClientWidth: {basicAttribute.bodyClientWidth}</p>
+      <p>bodyClientHeight: {basicAttribute.bodyClientHeight}</p>
     </>
   )
 }
