@@ -35,5 +35,5 @@ declare namespace useHooks {
   // attribute
   function useBasicResize(): BasicAttribute;
   // refresh, params, setRefresh, setParams
-  function useSearch<T>(initParams?: T, initRefresh?: boolean): [boolean, object, (refresh: boolean) => void, (params: T) => void];
+  function useSearch<T>(initParams?: T, initRefresh?: boolean): [boolean, T, (refresh: boolean) => void, (params: T) => void];
 }
