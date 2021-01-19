@@ -31,7 +31,7 @@ declare namespace useHooks {
   // visible, current, openModal, closeModal
   function useModal<T>(initItem?: T, initVisible?: boolean): [boolean, T, (item?: T) => void, () => void];
   // list, pageInfo, loading, setList, setPageInfo, setLoading
-  function usePage<T, U = undefined>(): [T, U, boolean, StateAction<T>, StateAction<U>, StateAction<BooleanConstructor>];
+  function usePage<T, U = undefined>(): [T, U, boolean, StateAction<T>, StateAction<U>, StateAction<boolean>];
   // attribute
   function useResize(): [Attribute];
   // attribute
